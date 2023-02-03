@@ -7,7 +7,7 @@ use App\Models\FoundAnimal;
 use App\Models\LostAnimal;
 use Illuminate\Http\Request;
 
-class GaleriaController extends Controller
+class PerfilController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,44 +16,18 @@ class GaleriaController extends Controller
      */
     public function index()
     {
-        return view('site.galeria',['postsAchado'=>FoundAnimal::all()],['postsPerdido'=>LostAnimal::all()]);
-    }
-
-
-
-    public function achado (FoundAnimal $post)
-    {
-        return view('site.post-achado-individual',['post' => $post]);
-    }
-
-    public function perdido (LostAnimal $post)
-    {
-        
-        return view('site.post-perdido-individual',['post' => $post]);
-    }
-
-
-
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return view('site.perfil');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Display the specified resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function show()
     {
-        //
+        return view('site.meus-posts',['postsAchado'=>FoundAnimal::all()],['postsPerdido'=>LostAnimal::all()]);
     }
 
     /**

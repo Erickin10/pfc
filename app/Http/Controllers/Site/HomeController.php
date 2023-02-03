@@ -3,11 +3,9 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Models\FoundAnimal;
-use App\Models\LostAnimal;
 use Illuminate\Http\Request;
 
-class GaleriaController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,21 +14,21 @@ class GaleriaController extends Controller
      */
     public function index()
     {
-        return view('site.galeria',['postsAchado'=>FoundAnimal::all()],['postsPerdido'=>LostAnimal::all()]);
+        return view('site.home');
     }
 
-
-
-    public function achado (FoundAnimal $post)
+    /**
+     * show
+     *
+     * @param mixed $slug
+     * @return void
+     *
+     */
+    public function show ($slug)
     {
-        return view('site.post-achado-individual',['post' => $post]);
+        return view('site.post-individual', ['post' => $slug]);
     }
 
-    public function perdido (LostAnimal $post)
-    {
-        
-        return view('site.post-perdido-individual',['post' => $post]);
-    }
 
 
 

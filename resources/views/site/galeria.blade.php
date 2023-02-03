@@ -51,6 +51,14 @@
                 </li>
 
                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Perfil</a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="{{route('site.perfil')}}">Editar perfil</a></li>
+                      <li><a class="dropdown-item" href="{{route('site.perfil.meus-posts')}}">Editar posts</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Postar</a>
                   <ul class="dropdown-menu dropdown-menu-dark">
                     <li><a class="dropdown-item" href="{{route('site.postar-achado')}}">Achado</a></li>

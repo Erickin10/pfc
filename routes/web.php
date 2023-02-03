@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Site\HomeController;
 use App\Http\Controllers\Site\GaleriaController;
 use App\Http\Controllers\Site\PostarPerdidoController;
 use App\Http\Controllers\Site\PostarAchadoController;
+use App\Http\Controllers\Site\PerfilController;
 
 
 /*
@@ -18,7 +20,11 @@ use App\Http\Controllers\Site\PostarAchadoController;
 |
 */
 
+
+
 Route::namespace('Site')->group(function (){
+
+
 
     Route::get('galeria', [GaleriaController::class, 'index']) -> name('site.galeria');
     Route::get('galeria/achado/{post}', [GaleriaController::class, 'achado']) -> name ('site.galeria.achado.post-individual');
@@ -33,10 +39,15 @@ Route::namespace('Site')->group(function (){
     Route::get('postar-perdido', [PostarPerdidoController::class, 'index']) -> name('site.postar-perdido');
     Route::post('postar-perdido/store', [PostarPerdidoController::class, 'formPerdido']) -> name('site.postar-perdido.form');
 
+    Route::get('perfil', [PerfilController::class, 'index']) -> name('site.perfil');
+    Route::get('perfil/meus-posts', [PerfilController::class, 'show']) -> name('site.perfil.meus-posts');
 });
 
 
-
 Auth::routes();
+Route::get('/home', [HomeController::class, 'index'])->name('site.home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('site.home');
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect('/login');
+})->name('logout');
