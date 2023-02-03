@@ -42,9 +42,10 @@ Route::middleware('auth')->namespace('Site')->group(function (){
     Route::get('perfil/meus-posts', [PerfilController::class, 'show']) -> name('site.perfil.meus-posts');
 });
 
+Route::view('/', 'auth.login');
 
 Auth::routes();
-Route::get('/home', [HomeController::class, 'index'])->name('site.home');
+Route::middleware('auth')->get('/home', [HomeController::class, 'index'])->name('site.home');
 
 Route::get('/logout', function () {
     Auth::logout();
