@@ -61,43 +61,19 @@
 
     /*Muda a posição e dimensões do container*/
     .container-login {
-        width: 35%;
-        top: 56%;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 540px;
         text-align: center;
+        align-items: center;
     }
 
-    /*Muda a posição da logo no login*/
-    .logo-login{
-        width: auto;
-        top: -50%;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-
-    /*Muda a posição do SOCÃES&GATOS no login*/
-    .socaesegatos-login-title{
-        color: #FFF;
-        width: 35%;
-        top: -35%;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-
-    /*Muda a posição do "Tem conta?" no login*/
-    .temconta-title{
-        width: 35%;
-        top: -17%;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+    /*Cor dos links de cadastro*/
+    a{
+        -webkit-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease;
+        color: #fbceb5;
     }
 
     /*Altera a distancia do container pra o topo da pagina */
@@ -116,7 +92,10 @@
         background-size: cover;
     }
 
-
+    /*Escrita do "ja tem sua conta?"*/
+    .login-wrap {
+        color: rgba(255, 255, 255, 0.9);
+    }
 
     /*Escrita de baixo do cadastre-se*/
     .login-wrap h3 {
@@ -181,8 +160,8 @@
     /* Cria uma checkbox personalizada */
     .checkmark{
         position: absolute;
-        top: 20%;
-        left: 60.5%;
+        top: 0;
+        left: 0;
     }
 
     /* Cria uma checkbox para que ela fique visivel quando nao e marcada*/
@@ -225,46 +204,6 @@
         background: #fbceb5 !important;
         border: 1px solid #fbceb5 !important;
         color: #000 !important;
-    }
-
-    .form-control-login.btn.btn-primary.submit.px-3:hover {
-
-        transform: scale(1.05);
-
-    }
-
-
-
-    .cadastrese-login {
-
-        text-decoration: none;
-        color: #fbceb5;
-
-    }
-
-    .cadastrese-login:hover{
-
-        color: rgb(152, 202, 137);
-    }
-
-    .ou {
-
-        color: #fff;
-    }
-    .ou:hover{
-
-        color: #fbceb5;
-    }
-
-    .cadastrong-login {
-        text-decoration: none;
-        color: #fbceb5;
-    }
-
-    .cadastrong-login:hover{
-
-        color: rgb(152, 202, 137);
-
     }
 
 

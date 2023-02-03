@@ -51,7 +51,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Perfil</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
                     <ul class="dropdown-menu dropdown-menu-dark">
                       <li><a class="dropdown-item" href="{{route('site.perfil')}}">Editar perfil</a></li>
                       <li><a class="dropdown-item" href="{{route('site.perfil.meus-posts')}}">Editar posts</a></li>
@@ -68,6 +68,12 @@
 
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('site.galeria')}}">Achados e perdidos</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}">
+                        Logout
+                    </a>
                 </li>
 
               </ul>

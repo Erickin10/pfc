@@ -22,14 +22,12 @@ use App\Http\Controllers\Site\PerfilController;
 
 
 
-Route::namespace('Site')->group(function (){
-
-
+Route::middleware('auth')->namespace('Site')->group(function (){
 
     Route::get('galeria', [GaleriaController::class, 'index']) -> name('site.galeria');
     Route::get('galeria/achado/{post}', [GaleriaController::class, 'achado']) -> name ('site.galeria.achado.post-individual');
     Route::get('galeria/perdido/{post}', [GaleriaController::class, 'perdido']) -> name ('site.galeria.perdido.post-individual');
-    
+
 
     Route::view('post-feito', 'site.post-feito') -> name('site.post-feito');
     Route::view('cadastro-feito', 'site.cadastro-feito') -> name('site.cadastro-feito');
