@@ -246,7 +246,7 @@
     /*Estilo do fieldset */
     #msform-cad {
         width: 600px ;
-        margin: 50px auto;
+        margin:50px auto;
         text-align-last: center;
         position: relative;
     }
@@ -259,8 +259,7 @@
         padding: 20px 30px;
         box-sizing: border-box;
         top: -140px;
-        width: 80%;
-        margin: 0 10%;
+        width: 75%;
         position: relative;
     }
 
@@ -269,7 +268,7 @@
         padding: 3px;
         border: 1px solid #7fab7c;
         border-radius: 3px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         width: 100%;
         box-sizing: border-box;
         font-family: montserrat;

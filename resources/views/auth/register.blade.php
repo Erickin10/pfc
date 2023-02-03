@@ -69,7 +69,82 @@ background-size: cover;">
                             @enderror
                         </div>
 
-                        
+                        <!-- Telefone -->
+                        <div class="input-box">
+                            <input id="telefoneuser" type="tel" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" placeholder="Telefone: (XX)XXXXX-XXXX" >
+
+                            @error('phone')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <!-- CEP -->
+                        <div class="input-box">
+                            <input id="cepuser" type="text" class="form-control @error('cep') is-invalid @enderror" name="cep" value="{{ old('cep') }}" required autocomplete="cep" placeholder="Cep (Apenas Numeros)" >
+
+                            @error('cep')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <!-- Rua -->
+                        <div class="input-box">
+                            <input id="ruauser" type="text" class="form-control @error('rua') is-invalid @enderror" name="rua" value="{{ old('rua') }}" required autocomplete="rua" placeholder="Nome da Rua" >
+
+                            @error('rua')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <!-- Bairro -->
+                        <div class="input-box">
+                            <input id="bairrouser" type="text" class="form-control @error('bairro') is-invalid @enderror" name="bairro" value="{{ old('bairro') }}" required autocomplete="bairro" placeholder="Nome do Bairro" >
+
+                            @error('bairro')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <!-- Cidade -->
+                        <div class="input-box">
+                            <input id="cidadeuser" type="text" class="form-control @error('cidade') is-invalid @enderror" name="cidade" value="{{ old('cidade') }}" required autocomplete="cidade" placeholder="Cidade" >
+
+                            @error('cidade')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <!-- Complemento -->
+                        <div class="input-box">
+                            <input id="complementouser" type="text" class="form-control @error('complemento') is-invalid @enderror" name="complemento" value="{{ old('complemento') }}" required autocomplete="complemento" placeholder="Complemento" >
+
+                            @error('complemento')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <!-- Numero da casa-->
+                        <div class="input-box">
+                            <input id="numerouser" type="number" class="form-control @error('numero') is-invalid @enderror" name="numero" value="{{ old('numero') }}" required autocomplete="numero" placeholder="Numero" >
+
+                            @error('numero')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
 
                         <!-- Senha -->
                         <div class="input-box">
