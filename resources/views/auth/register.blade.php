@@ -49,7 +49,7 @@ background-size: cover;">
 
                         <!-- Nome -->
                         <div class="input-box">
-                            <input id="nomeuser" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Nome Completo" autofocus>
+                            <input id="nomeuser" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Nome" autofocus>
 
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -68,6 +68,8 @@ background-size: cover;">
                                 </span>
                             @enderror
                         </div>
+
+                        
 
                         <!-- Senha -->
                         <div class="input-box">
@@ -88,7 +90,7 @@ background-size: cover;">
                     </div>
 
                     <!-- Botão de enviar dados -->
-                    <a href="cadastro-certo.html" class="submit action-button" target="_top">Cadastrar</a>
+                    <button class="submit action-button" target="_top">Cadastrar</button>
 
                     <br><br>
 
