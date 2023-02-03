@@ -85,49 +85,19 @@
       <div class="container">
         <div class="row slick_slide">
 
-          <div class="col-3">
-            <div class="team">
+            @foreach ($postsPerdido as $post)
+            <div class="col-3">
+                <div class="team">
 
-              <img src="imagens/cachorro encontrado.jpeg" alt="" class="img-fluid">
-              <a href="#"></a>
-              <h5> Vira-lata</h5>
-              <p>Achado ontem</p>
+                    <a href="{{route('site.galeria.perdido.post-individual', ['post' => $post])}}">
+                        <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}" class="img-fluid">
+                    </a>
+                    <h5>{{$post->name_Animal}}</h5>
+                    <p>{{$post->breed_Animal}}</p>
 
+                </div>
             </div>
-          </div>
-
-          <div class="col-3">
-            <div class="team">
-
-              <img src="imagens/gatoperdido.jpg" alt="" class="img-fluid">
-              <a href="#"></a>
-              <h5> Gato</h5>
-              <p>Achado faz 2 semanas</p>
-
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="team">
-
-              <img src="imagens/max.jpeg" alt="" class="img-fluid">
-              <a href="#"></a>
-              <h5>Max</h5>
-              <p>Achado dia 01/09/22</p>
-
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="team">
-
-              <img src="imagens/salsicha achado.jpg" alt="" class="img-fluid">
-              <a href="#"></a>
-              <h5> Salsicha</h5>
-              <p>Achado hoje</p>
-
-            </div>
-          </div>
+            @endforeach
 
         </div>
       </div>
@@ -150,49 +120,19 @@
       <div class="container">
         <div class="row slick_slide">
 
-          <div class="col-3">
-            <div class="team">
+            @foreach ($postsAchado as $post)
+            <div class="col-3">
+                <div class="team">
 
-              <img src="imagens/cachorro encontrado.jpeg" alt="" class="img-fluid">
-              <a href="#"></a>
-              <h5> Vira-lata</h5>
-              <p>Perdido ontem</p>
+                    <a href="{{route('site.galeria.achado.post-individual', ['post' => $post])}}">
+                        <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}" class="img-fluid">
+                    </a>
+                    <h5>{{$post->name_Animal}}</h5>
+                    <p>{{$post->breed_Animal}}</p>
 
+                </div>
             </div>
-          </div>
-
-          <div class="col-3">
-            <div class="team">
-
-              <img src="imagens/gatoperdido.jpg" alt="" class="img-fluid">
-              <a href="#"></a>
-              <h5> Gato</h5>
-              <p>Perdido faz 2 semanas</p>
-
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="team">
-
-              <img src="imagens/max.jpeg" alt="" class="img-fluid">
-              <a href="#"></a>
-              <h5>Max</h5>
-              <p>Perdido dia 01/09/22</p>
-
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="team">
-
-              <img src="imagens/salsicha achado.jpg" alt="" class="img-fluid">
-              <a href="#"></a>
-              <h5> Salsicha</h5>
-              <p>Perdido hoje</p>
-
-            </div>
-          </div>
+            @endforeach
 
         </div>
       </div>

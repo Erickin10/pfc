@@ -26,6 +26,7 @@
     }
 
 
+
 /* Barra de navegacao */
     header, .navbar {
         background-color: #7fab7c;
@@ -460,14 +461,14 @@
     .achados-home::after{
         content: "";
         position: absolute;
-        bottom: -26%;
-        left: 47.5%;
-        right: 47.5%;
+        bottom: -25%;
+        left: 46%;
+        right: 46%;
         height: 5px;
         background-color: #7fab7c;
       }
 
-    /*Titulo  Peridos home*/
+    /*Titulo Perdidos home*/
     .perdidos-home{
         color: #444;
         margin: 0 0 65px 0;
@@ -476,11 +477,11 @@
         text-shadow: 3px 2px #bbb;
     }
 
-    /*Traço depois do Peridos home*/
+    /*Traço depois do Perdidos home*/
     .perdidos-home::after{
         content: "";
         position: absolute;
-        bottom: -145%;
+        bottom: -138%;
         left: 47.5%;
         right: 47.5%;
         height: 5px;
@@ -488,8 +489,7 @@
       }
 
     /*Titulo SOCÃES&GATOS home*/
-
-      .sobrenos-home{
+    .sobrenos-home{
         color: #444;
         margin: 0 0 65px 0;
         font-size: 40px;
@@ -501,9 +501,9 @@
     .sobrenos-home::after{
         content: "";
         position: absolute;
-        bottom: -260%;
-        left: 45%;
-        right: 45%;
+        bottom: -247%;
+        left: 38%;
+        right: 38%;
         height: 5px;
         background-color: #7fab7c;
       }
@@ -633,16 +633,6 @@
         border-radius: 50px;
     }
 
-    .team a{
-        font-size: 25px;
-        padding: 4px 6px;
-        background: #fff;
-    }
-
-    .team a i:hover{
-        color: #5f945b;
-    }
-
     .team img{
         padding-bottom: 10px;
         border-radius: 50px;
@@ -659,7 +649,6 @@
     .team p{
         color: #000;
         font-size: 14px;
-
     }
 
     /*Botoes slider achados e peridos*/
@@ -797,9 +786,9 @@
     .nossotime-home::after{
         content: "";
         position: absolute;
-        bottom: -355%;
-        left: 47.5%;
-        right: 47.5%;
+        bottom: -343%;
+        left: 46%;
+        right: 46%;
         height: 5px;
         background-color: #7fab7c;
     }
@@ -1430,4 +1419,312 @@
 
 
 
-    
+
+/*Perfil*/
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #BA68C8
+    }
+
+    .profile-button {
+        background: rgb(99, 39, 120);
+        box-shadow: none;
+        border: none
+    }
+
+    .profile-button:hover {
+        background: #682773
+    }
+
+    .profile-button:focus {
+        background: #682773;
+        box-shadow: none
+    }
+
+    .profile-button:active {
+        background: #682773;
+        box-shadow: none
+    }
+
+    .back:hover {
+        color: #682773;
+        cursor: pointer
+    }
+
+    .labels {
+        font-size: 11px
+    }
+
+    .add-experience:hover {
+        background: #BA68C8;
+        color: #fff;
+        cursor: pointer;
+        border: solid 1px #BA68C8
+    }
+
+
+
+
+
+/*Meus posts*/
+    .meusposts-main-title{
+        color: #444;
+        font-size: 40px;
+        position: absolute;
+        top:15.1%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-shadow: 3px 2px #bbb;
+    }
+
+    /*Traço debaixo do Achados*/
+    .meusposts-main-title::after{
+        content: "";
+        position: absolute;
+        bottom: -20%;
+        left: 30%;
+        right: 30%;
+        height: 5px;
+        background-color: #7fab7c;
+    }
+
+    /*Container achados*/
+    .meusposts-container {
+        height: 46%;
+        width: 46%;
+        overflow-y: scroll;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border-radius: 3%;
+        box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    /*Muda o tamanho das fotos dentro do container achados*/
+    .meusposts-container img {
+        height: 30%;
+        width: 19%;
+        padding: 1%;
+        border-radius: 15%;
+        cursor: pointer;
+    }
+
+    /*Resposavel por animar a imagem quando voce coloca o cursor em cima dela*/
+    .meusposts-container img:hover {
+        filter: grayscale(100%);
+        transform: scale(1.1);
+    }
+
+    /*Css do cachorro da direita em perdidos*/
+    .gatoparede img{
+        width: 41%;
+        left: 59%;
+        top: 26%;
+        position: absolute;
+        max-width: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .cachorroparede img{
+        width: 43%;
+        right: 58%;
+        top: 27%;
+        position: absolute;
+        max-width: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .perfis{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        top: 50%;
+    }
+
+    .input-box input {
+        margin: 0.6rem 0;
+        padding: 0rem 8.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
+        font-size: 0.8rem;
+        margin-bottom: 2%;
+    }
+
+    /*Mostrara postagem*/
+    .mostrarpostagem{
+        width:30%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+
+        box-shadow: 0 0 25px 5px rgb(0 0 0 / 40%);
+        border-radius: 25%;
+        height:  auto;
+        top: 50%;
+    }
+
+    .mostrarpostagem img{
+        width: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        position: absolute;
+        border-radius: 20%;
+        top: 30%;
+    }
+
+    .mostrarpostagem p{
+        padding-top: 45%;
+        padding-bottom: 5%;
+        text-align: left;
+        left: 45%;
+        position: relative;
+    }
+
+    .btn-mostrar{
+        color: #FFF;
+        background-color: #7fab7c;
+        box-shadow: 0 0 25px 5px rgb(0 0 0 / 40%);
+    }
+
+    .btn-mostrar:hover{
+        background-color: #628660;
+        color: #fff;
+    }
+
+
+
+
+
+/* FontAwesome for working BootSnippet :> */
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    #team {
+        background: #eee !important;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #108d6f;
+        border-color: #108d6f;
+        box-shadow: none;
+        outline: none;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #007b5e;
+        border-color: #007b5e;
+    }
+
+    section .section-title {
+        text-align: center;
+        color: #007b5e;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    #team .card {
+        border: none;
+        background: #ffffff;
+    }
+
+    .image-flip:hover .backside,
+    .image-flip.hover .backside {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        border-radius: .25rem;
+    }
+
+    .image-flip:hover .frontside,
+    .image-flip.hover .frontside {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+
+    .mainflip {
+        -webkit-transition: 1s;
+        -webkit-transform-style: preserve-3d;
+        -ms-transition: 1s;
+        -moz-transition: 1s;
+        -moz-transform: perspective(1000px);
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transition: 1s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .frontside {
+        position: relative;
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+
+    .backside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white;
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    }
+
+    .frontside,
+    .backside {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: 1s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transition: 1s;
+        -moz-transform-style: preserve-3d;
+        -o-transition: 1s;
+        -o-transform-style: preserve-3d;
+        -ms-transition: 1s;
+        -ms-transform-style: preserve-3d;
+        transition: 1s;
+        transform-style: preserve-3d;
+    }
+
+    .frontside .card,
+    .backside .card {
+        min-height: 312px;
+    }
+
+    .backside .card a {
+        font-size: 18px;
+        color: #007b5e !important;
+    }
+
+    .frontside .card .card-title,
+    .backside .card .card-title {
+        color: #007b5e !important;
+    }
+
+    .frontside .card .card-body img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }

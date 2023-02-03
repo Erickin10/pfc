@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Models\FoundAnimal;
+use App\Models\LostAnimal;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,7 +16,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('site.home');
+        return view('site.home',['postsAchado'=>FoundAnimal::all()],['postsPerdido'=>LostAnimal::all()]);
     }
 
     /**
