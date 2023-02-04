@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterOngController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Site\HomeController;
@@ -42,7 +43,11 @@ Route::middleware('auth')->namespace('Site')->group(function (){
     Route::get('perfil/meus-posts', [PerfilController::class, 'show']) -> name('site.perfil.meus-posts');
 });
 
-Route::view('/', 'auth.login');
+Route::get('cadastrar-ong', [RegisterOngController::class, 'index']) -> name('site.cadastrar-ong');
+Route::post('cadastrar-ong/store', [RegisterOngController::class, 'createOng']) -> name('site.cadastrar-ong.form');
+Route::view('cadastro-ong-feito', 'site.cadastro-ong-feito') -> name('site.cadastro-ong-feito');
+
+Route::view('/', 'auth.login')-> name('site.login');
 
 Auth::routes();
 Route::middleware('auth')->get('/home', [HomeController::class, 'index'])->name('site.home');

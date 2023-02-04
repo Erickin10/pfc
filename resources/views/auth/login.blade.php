@@ -24,9 +24,9 @@
 			<div class="container-login">
 				<div class="row justify-content-center">
 					<div class="col-md-6 text-center mb-5">
-						<img src="imagens/logzin.png" alt="Logo" width="70" height="64" class="d-inline-block align-text-top">
+						<img src="imagens/logzin.png" alt="Logo" width="70" height="64" class="logo-login d-inline-block align-text-top">
 
-						<h2 class="heading-section" style="line-height: 1.5; font-weight: 400;	font-family: Lato, Arial, sans-serif;">
+						<h2 class="login-title heading-section" style="line-height: 1.5; font-weight: 400;	font-family: Lato, Arial, sans-serif;">
 							SOCÃES&GATOS
 						</h2>
 
@@ -92,10 +92,10 @@
 							<br>
 
 							@if (Route::has('register'))
-                                    <a href="{{ route('register') }}">Cadastre-se</a>
+                                    <a class="link-login" href="{{ route('register') }}">Cadastre-se</a>
                             @endif
 							ou
-							<a href="cadastro-ong.html">Cadastre sua ONG</a>
+							<a class="link-login" href="{{ route('site.cadastrar-ong') }}">Cadastre sua ONG</a>
 
 						</div>
 					</div>

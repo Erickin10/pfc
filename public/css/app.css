@@ -69,7 +69,7 @@
     }
 
     /*Cor dos links de cadastro*/
-    a{
+    .link-login {
         -webkit-transition: .3s all ease;
         -o-transition: .3s all ease;
         transition: .3s all ease;

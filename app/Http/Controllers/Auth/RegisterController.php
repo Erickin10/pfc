@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\EnderecoUser;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -62,12 +63,29 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+    protected function create(array $request){
+
+        $data = [
+            'cep' => $request['cep'],
+            'rua' => $request['rua'],
+            'bairro' => $request['bairro'],
+            'cidade' => $request['cidade'],
+            'complemento' => $request['complemento'],
+            'numero' => $request['numero'],
+        ];
+
+        EnderecoUser::create($data);
+        $id_Endereco = EnderecoUser::catchIdEndereco($data);
+
+        $data2 = [
+            'name' => $request['name'],
+            'phone' => $request['phone'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+            'id_Endereco' => $id_Endereco
+        ];
+
+        return User::create($data2);;
+
     }
 }

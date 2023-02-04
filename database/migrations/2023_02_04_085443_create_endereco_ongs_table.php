@@ -13,20 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('endereco_ongs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->number('phone');
-            $table->number('cep');
+            $table->string('cep');
             $table->string('rua');
             $table->string('bairro');
             $table->string('cidade');
             $table->string('complemento');
-            $table->number('numero');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->integer('numero');
             $table->timestamps();
         });
     }
@@ -38,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('endereco_ongs');
     }
 };
