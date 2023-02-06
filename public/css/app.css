@@ -389,7 +389,7 @@
     /*Titulo Achados home*/
     .achados-home {
         color: #444;
-        margin: 0 0 65px 0;
+        margin: 0 0 0 0;
         font-size: 40px;
         text-align: center;
         text-shadow: 3px 2px #bbb;
@@ -409,7 +409,7 @@
     /*Titulo Perdidos home*/
     .perdidos-home{
         color: #444;
-        margin: 0 0 65px 0;
+        margin: 0 0 0 0;
         font-size: 40px;
         text-align: center;
         text-shadow: 3px 2px #bbb;
@@ -419,7 +419,7 @@
     .perdidos-home::after{
         content: "";
         position: absolute;
-        bottom: -138%;
+        bottom: -127%;
         left: 47.5%;
         right: 47.5%;
         height: 5px;
@@ -439,7 +439,7 @@
     .sobrenos-home::after{
         content: "";
         position: absolute;
-        bottom: -247%;
+        bottom: -226%;
         left: 38%;
         right: 38%;
         height: 5px;
@@ -724,7 +724,7 @@
     .nossotime-home::after{
         content: "";
         position: absolute;
-        bottom: -343%;
+        bottom: -322%;
         left: 46%;
         right: 46%;
         height: 5px;
