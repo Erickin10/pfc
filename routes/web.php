@@ -48,6 +48,7 @@ Route::middleware('auth')->namespace('Site')->group(function (){
     // Routas do Perfil
     Route::get('perfil', [PerfilController::class, 'index']) -> name('site.perfil');
     Route::get('perfil/meus-posts', [PerfilController::class, 'show']) -> name('site.perfil.meus-posts');
+    Route::put('/atualizar-dados/{enderecoUser_id}', [PerfilController::class, 'update'])->name('site.perfil.editar');
 });
 
 // Routas dos Cadastros

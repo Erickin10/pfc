@@ -71,11 +71,9 @@ class RegisterController extends Controller
             'bairro' => $request['bairro'],
             'cidade' => $request['cidade'],
             'complemento' => $request['complemento'],
-            'numero' => $request['numero'],
+            'numero' => $request['numero']
         ];
 
-        //EnderecoUser::create($data);
-        //$id_Endereco = catchIdEndereco($data);
         $endereco = EnderecoUser::create($data);
         $id_Endereco = $endereco->getKey();
 
@@ -91,4 +89,5 @@ class RegisterController extends Controller
         return User::create($data2);;
 
     }
+
 }

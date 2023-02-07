@@ -22,7 +22,7 @@ class OngsController extends Controller
 
         if($search == "Todas"){
 
-            return view('site.ongs', ['ongs'=>Ong::all()], ['enderecoOng'=>EnderecoOng::all()]);
+            return view('site.ongs', ['ongs'=>Ong::all()], ['endereco_ong'=>EnderecoOng::all()]);
 
         }else{
 
