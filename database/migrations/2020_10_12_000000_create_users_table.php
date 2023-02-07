@@ -14,15 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->foreignId('id_Endereco')->references('id')->on('endereco_users');
             $table->id();
+            $table->timestamps();
+
+            $table->foreignId('id_Endereco')->references('id')->on('endereco_users');
             $table->string('name');
             $table->string('phone');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->timestamps();
         });
     }
 

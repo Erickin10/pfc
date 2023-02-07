@@ -97,7 +97,7 @@ background-size: cover;">
 
                         <!-- CEP -->
                         <div class="input-box">
-                            <div class="input-box">
+
                                 <input
                                 type="text"
                                 class="form-control shadow-none"
@@ -107,12 +107,12 @@ background-size: cover;">
                                 maxlength="9"
                                 minlength="9"
                                 required>
-                            </div>
+
                         </div>
 
                         <!-- Rua -->
                         <div class="input-box">
-                            <div class="input-box">
+
                                 <input
                                 type="text"
                                 class="form-control shadow-none"
@@ -120,7 +120,7 @@ background-size: cover;">
                                 name="rua"
                                 placeholder="Rua"
                                 required>
-                            </div>
+
                         </div>
 
                         <!-- Bairro -->
@@ -134,7 +134,42 @@ background-size: cover;">
                                 required>
                         </div>
 
-                        <!-- Cidade -->
+                        <div class="input-box">
+
+                        <select  name="cidade" id="select-cidadeong" class="form-control shadow-none" required>
+                            <option value="Estado" selected>Estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito-Federal</option>
+                            <option value="ES">Espirito Santo</option>
+                            <option value="GO">Goiais</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grando do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+
+                        </div>
+
+                        <!-- Cidade
                         <div class="input-box">
                             <input
                                 type="text"
@@ -144,6 +179,7 @@ background-size: cover;">
                                 placeholder="Cidade"
                                 required>
                         </div>
+                        -->
 
                         <!-- Complemento -->
                         <div class="input-box">

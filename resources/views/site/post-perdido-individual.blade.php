@@ -104,7 +104,7 @@
     <strong>Genero: </strong>{{$post->gender_Animal}}<br>
     <strong>Porte: </strong>{{$post->size_Animal}}<br>
     <strong>Onde foi achado?: </strong>{{$post->local_Found_Animal}}<br>
-    <strong>Observaçoes: </strong>{{$post->post_Description}}<br><br>
+    <strong>Observaçoes: </strong>{{$post->post_Description}}</p><br><br>
   </div>
 
 </body>

@@ -14,14 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ongs', function (Blueprint $table) {
-            $table->foreignId('id_Endereco')->references('id')->on('endereco_ongs');
             $table->id();
+            $table->timestamps();
+
+            $table->foreignId('id_Endereco')->references('id')->on('endereco_ongs');
             $table->string('name');
             $table->string('phone');
             $table->string('email')->unique();
             $table->string('description')->nullable();
             $table->string('cnpj');
-            $table->timestamps();
         });
     }
 

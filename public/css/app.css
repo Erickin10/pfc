@@ -208,6 +208,8 @@
 
 
 
+
+
 /* Cadastro */
 
     /* Containers do Cadastro */
@@ -276,6 +278,20 @@
         font-size: 13px;
     }
 
+    /*Inputs de select*/
+    #select-cidadeong {
+        padding: 3px;
+        border: 1px solid #7fab7c;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: #2C3E50;
+        font-size: 13px;
+    }
+
     /*Botäo*/
     #msform-cad .action-button {
         width: 100px;
@@ -320,7 +336,7 @@
     }
 
     /*input da caixa de input*/
-    .input-box input {
+    .input-box select input {
         margin: 0.6rem 0;
         padding: 0.8rem 1.2rem;
         border: none;
@@ -329,7 +345,7 @@
         font-size: 0.8rem;
     }
 
-    .input-box input:hover {
+    .input-box input:hover select:hover{
         background-color: #eeeeee75;
     }
 
@@ -1509,21 +1525,21 @@
         top: 50%;
     }
 
-    .mostrarpostagem img{
-        width: 60%;
+    .mostrarpostagem img {
+        width: 75%;
         left: 50%;
         transform: translate(-50%, -50%);
         cursor: pointer;
         position: absolute;
         border-radius: 20%;
-        top: 30%;
+        top: 25%;
     }
 
-    .mostrarpostagem p{
+    .mostrarpostagem p {
         padding-top: 45%;
         padding-bottom: 5%;
         text-align: left;
-        left: 45%;
+        left: 10%;
         position: relative;
     }
 

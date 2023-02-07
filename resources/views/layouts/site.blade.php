@@ -73,8 +73,8 @@
                     <a class="nav-link" href="{{route('site.galeria')}}">Achados e perdidos</a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}">
                             Logout
                         </a>
                     </li>
@@ -82,9 +82,39 @@
                 </ul>
 
                 <!-- Barra de pesquisa da barra de navegação -->
-                <form class="d-flex mt-3" role="search">
+                <form method="GET" action="{{route('site.ong')}}" class="d-flex mt-3" role="search">
 
-                    <input class="form-control me-2" type="Procure uma ONG" placeholder="Procure uma ONG" aria-label="Procure uma ONG">
+                    <select  name="search" id="select-estadoong" aria-label="Procure uma ONG" class="form-control me-2" required>
+                        <option value="" selected>Procure ONG's no seu Estado</option>
+                        <option value="Estado">Mostrar Todas</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito-Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiais</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grando do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
                     <button class="btn btn-success" type="submit">Procurar</button>
 
                 </form>

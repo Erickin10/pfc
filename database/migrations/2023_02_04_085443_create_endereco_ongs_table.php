@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('endereco_ongs', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
+
             $table->string('cep');
             $table->string('rua');
             $table->string('bairro');
             $table->string('cidade');
             $table->string('complemento');
             $table->integer('numero');
-            $table->timestamps();
         });
     }
 

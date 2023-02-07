@@ -3,15 +3,11 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Models\FoundAnimal;
-use App\Models\LostAnimal;
+use Illuminate\Http\Request;
 use App\Models\Ong;
 use App\Models\EnderecoOng;
-use App\Models\User;
-use App\Models\EnderecoUser;
-use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class OngsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,25 +16,43 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('site.home', ['postsAchado'=>FoundAnimal::all()], ['postsPerdido'=>LostAnimal::all()]);
-        //, ['Ongs'=>Ong::all()], ['EnderecoOngs'=>EnderecoOng::all()], ['Users'=>User::all()], ['EnderecoUsers'=>EnderecoUser::all()]
+
+        $search = request('search');
+
+
+        if($search == "Todas"){
+
+            return view('site.ongs', ['ongs'=>Ong::all()], ['enderecoOng'=>EnderecoOng::all()]);
+
+        }else{
+
+            /*$endereco_ong = EnderecoOng::where([['cidade', 'like', $search]]);
+
+            //$id_endereco_ong = $ong->id_Endereco;
+
+            $ong= Ong::where([['id_Endereco', 'like', $endereco_ong->id]]);
+
+            return view('site.ongs', ['ongs' => $ong], ['endereco_ong' => $endereco_ong]);*/
+
+
+
+
+
+            /*$endereco_ong = EnderecoOng::where([['cidade', 'like', $search]])->first();
+
+            dd($endereco_ong);
+            if ($endereco_ong) {
+                $ong = Ong::where([['id_Endereco', 'like', $endereco_ong->id]])->first();
+
+                return view('site.ongs', ['ongs' => $ong], ['endereco_ong' => $endereco_ong]);
+            }*/
+
+            return view('site.ongs', ['endereco_ong' => EnderecoOng::where([['cidade', 'like', $search]])->get()],
+            ['ongs'=>Ong::all()]);
+
+        }
+
     }
-
-    /**
-     * show
-     *
-     * @param mixed $slug
-     * @return void
-     *
-     */
-    public function show ($slug)
-    {
-        return view('site.post-individual', ['post' => $slug]);
-    }
-
-
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -57,6 +71,17 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
         //
     }

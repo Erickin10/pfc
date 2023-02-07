@@ -29,8 +29,10 @@ class RegisterOngController extends Controller
             'numero' => $request['numero'],
         ];
 
-        EnderecoOng::create($data);
-        $id_Endereco = EnderecoOng::catchIdEndereco($data);
+        //EnderecoOng::create($data);
+        //$id_Endereco = EnderecoOng::catchIdEndereco($data);
+        $endereco = EnderecoOng::create($data);
+        $id_Endereco = $endereco->getKey();
 
         $data2 = [
             'name' => $request['name'],
