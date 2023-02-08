@@ -13,6 +13,7 @@
     {{implode('', $errors->all('<div>:message</div>'))}}
     @endif
     @csrf
+
     <!-- Barra de progressão -->
     <ul id="progressbar">
       <li class="active">Idenficicação</li>
@@ -101,6 +102,7 @@
       <input type="text" name="post_Description" placeholder="Observações" />
       <input type="text" name="local_Animal" placeholder="Onde o animal se encontra?" />
       <input type="hidden" name="id_Usuario" value="{{Auth::user()->id}}"/>
+      <input type="hidden" name="type_Post" value="achado">
 
       <input type="button" name="previous" class="previous action-button" value="Anterior" />
       <button type="submit" class="submit action-button">Enviar</button>

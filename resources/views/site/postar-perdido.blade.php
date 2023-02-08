@@ -97,7 +97,7 @@
         <input type="text" name="post_Description" placeholder="Observações" />
         <input type="number" name="bounty_Animal" step="1" min="0" max="99999.99" id="recompensa" placeholder="Recompensa(opcional)"/>
         <input type="hidden" name="id_Usuario" value="{{Auth::user()->id}}"/>
-
+        <input type="hidden" name="type_Post" value="perdido">
        <input type="button" name="previous" class="previous action-button" value="Anterior" />
        <button type="submit" class="submit action-button">Enviar</button>
 

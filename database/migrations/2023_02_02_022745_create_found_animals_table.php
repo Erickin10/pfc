@@ -27,10 +27,9 @@ return new class extends Migration
             $table->integer('age_Animal');
             $table->string('local_Animal')->nullable();
             $table->string('local_Found_Animal')->nullable();
-            //$table->string('local_Lost_Animal')->nullable();
             $table->string('img_Animal')->nullable();
-            //$table->float('bounty_Animal')->nullable();
             $table->text('post_Description')->nullable();
+            $table->string('type_Post');
         });
     }
 
