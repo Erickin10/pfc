@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('description')->nullable();
             $table->string('cnpj');
-            $table->
         });
     }
 

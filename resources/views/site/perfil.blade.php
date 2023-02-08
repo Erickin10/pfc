@@ -178,7 +178,7 @@
 
                         <!-- Telefone -->
                         <div class="input-box-perfil">
-                            <input id="telefoneuser" type="tel" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ $user->phone }}" required autocomplete="phone" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" placeholder="Telefone: (XX)XXXXX-XXXX" >
+                            <input id="telefoneuser" type="tel" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ $user->phone }}" required autocomplete="phone" placeholder="Telefone: (XX)XXXXX-XXXX" >
 
                             @error('phone')
                                 <span class="invalid-feedback" role="alert">
@@ -189,7 +189,7 @@
 
                         <!-- CEP -->
                         <div class="input-box-perfil">
-                            <input id="cepuser" type="text" class="form-control @error('cep') is-invalid @enderror" name="cep" value="{{ $user->cep }}" required autocomplete="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="Cep (Apenas Numeros)" >
+                            <input id="cepuser" type="text" class="form-control @error('cep') is-invalid @enderror" name="cep" value="{{ $enderecoUser->cep }}" required autocomplete="cep" placeholder="Cep" >
 
                             @error('cep')
                                 <span class="invalid-feedback" role="alert">
@@ -312,7 +312,7 @@ position: absolute;">
 
     <!-- Sites-->
     <div class="text-center p-3" style="background-color: #7fab7cc4">
-        <section class="mb-4">
+        <section id="section" class="mb-4">
 
         <!-- Facebook -->
         <a

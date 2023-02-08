@@ -27,6 +27,7 @@ class RegisterOngController extends Controller
             'cidade' => $request['cidade'],
             'complemento' => $request['complemento'],
             'numero' => $request['numero'],
+            'estado' => $request['estado'],
         ];
 
         //EnderecoOng::create($data);

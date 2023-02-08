@@ -196,8 +196,6 @@ background-size: cover;">
                             required>
                         </div>
 
-                        <input type="hidden" name="aproved" value="false">
-
                     </div>
 
                     <!-- Botão de enviar dados -->

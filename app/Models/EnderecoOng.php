@@ -16,6 +16,7 @@ class EnderecoOng extends Model {
         'cidade',
         'complemento',
         'numero',
+        'estado',
     ];
 
     /*public function usuarios(){

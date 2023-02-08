@@ -5,6 +5,10 @@
 
 /* Gerais */
 
+    section{
+        padding: 56px 0;
+    }
+
     body{
         font-family:'Roboto', sans-serif;
     }
@@ -373,8 +377,9 @@
     .search-bar {
        position: absolute;
         background-color: #ffffff;
-        width: 70%;
-        height: 3%;
+        font-size: 16px;
+        width: 59%;
+        height: 4%;
         border: 2px solid #7fab7c;
         top:100%;
         left: 50%;
@@ -384,16 +389,16 @@
 
     .botaozin{
         position: absolute;
-         background-color: #7fab7c;
-         color: #fff;
-        top: 98.5%;
-        height: 3%;
+        background-color: #7fab7c;
+        color: #fff;
+        top: 98%;
+        height: 4%;
         width: 10%;
-         text-align: center;
-         left: 80%;
-         border: none;
-         font-size: 10px;
-     }
+        text-align: center;
+        left: 80%;
+        border: none;
+        font-size: 15px;
+    }
 
     .botaozin:hover{
         background-color: #628660;
@@ -1649,7 +1654,7 @@
     }
 
 
-    
+
 
 
     /* Redefinir Senha */
@@ -1759,7 +1764,7 @@
     border-color: #007b5e;
 }
 
-section {
+#section {
     padding: 6px 0;
 }
 

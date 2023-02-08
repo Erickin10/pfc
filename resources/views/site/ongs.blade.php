@@ -5,6 +5,7 @@
 
 @php
 use App\Models\Ong;
+use App\Models\User;
 @endphp
 
     <!-- Team -->
@@ -14,6 +15,8 @@ use App\Models\Ong;
             <div class="row">
                 <!-- Team member -->
                 @foreach ($endereco_ong as $endereco)
+
+
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="image-flip" >
                         <div class="mainflip flip-0">
@@ -51,13 +54,22 @@ use App\Models\Ong;
                                             <strong>Cnpj: </strong>{{$ong->cnpj}}<br>
                                         </p>
 
+
                                     </div>
                                 </div>
                             </div>
+                            @if(Auth::user()->role == "adm" && $ong->aproved == false)
 
+                            <div style="align-items: center">
+                                <button >deletar</button>
+                                <button>aprovar</button>
+                            </div>
+
+                            @endif
                         </div>
                     </div>
                 </div>
+
                 @endforeach
                 <!-- ./Team member -->
 
