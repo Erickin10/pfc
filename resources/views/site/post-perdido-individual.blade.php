@@ -94,18 +94,31 @@
         </nav>
         </header>
 
-<div class="mostrarpostagem">
-    <img src="{{asset($post->img_Animal)}}" alt="Imagem mostrar"><br><br>
-      <p ><strong>Nome: </strong>{{$post->name_Animal}}<br>
-    <strong>Animal: </strong>{{$post->type_Animal}}<br>
-    <strong>Raça: </strong>{{$post->breed_Animal}}<br>
-    <strong>Cor: </strong>{{$post->color_Animal}}<br>
-    <strong>Idade: </strong>{{$post->age_Animal}}<br>
-    <strong>Genero: </strong>{{$post->gender_Animal}}<br>
-    <strong>Porte: </strong>{{$post->size_Animal}}<br>
-    <strong>Onde foi achado?: </strong>{{$post->local_Found_Animal}}<br>
-    <strong>Observaçoes: </strong>{{$post->post_Description}}</p><br><br>
-  </div>
+        <!-- ==============================================
+        Hero
+        =============================================== -->
+        <div class="conti">
+            <div class="conti-card">
+                <div class="verpost-header">
+                    <strong>{{$post->name_Animal}}</strong>
+                </div>
+                <img src="{{asset($post->img_Animal)}}" class="card-img-top" alt="Imagem de Capa">
+                <div class="cardverpost-body">
+                    <strong>Animal:</strong>{{$post->type_Animal}}<br>
+                    <strong>Raça:</strong>{{$post->breed_Animal}}<<br>
+                    <strong>Cor:</strong>{{$post->color_Animal}}<br>
+                    <strong>Idade:</strong>{{$post->age_Animal}}<br>
+                    <strong>Genero:</strong>{{$post->gender_Animal}}<br>
+                    <strong>Porte:</strong>{{$post->size_Animal}}<br>
+                    <strong>Onde foi perdido?</strong>{{$post->local_Found_Animal}}<br>
+                    <strong>Recompensa: </strong>{{$post->bounty_Animal}}<br>
+                    <strong>Observaçoes:</strong>{{$post->post_Description}}<br><br>
+                </div>
+                <div class="verpost-footer">
+                    <a href="{{route('site.galeria')}}" class="verpost-btn btn">ok</a>
+                </div>
+            </div>
+        </div>
 
 </body>
 <!--Scripts-->
@@ -126,7 +139,12 @@
 <script src="js/custom.js"></script>
 
 <!--Rodapé da pagina-->
-<div style="position: absolute; bottom: 0; width: 100%; height: 2.5rem;">
+<div style="
+width: 100%;
+left: 50%;
+top: 143%;
+transform: translate(-50%, -50%);
+position: absolute;">
     <footer class="bg-light text-center text-white">
 
     <!-- Sites-->

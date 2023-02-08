@@ -3,6 +3,11 @@
 @section('title', 'Socães&Gatos')
 @section('content')
 <!--Slide fotos-->
+@php
+    $search = "Todas";
+@endphp
+
+
 <div class="container-fluid">
     <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
 
@@ -23,7 +28,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h2>Quer ajudar um bichinho?</h2>
             <p>Doe para alguma dessas ONGs</p>
-            <a href="#" class="main-btn">Ver ONGs</a>
+            <a href="{{route('site.ong')}}" class="main-btn">Ver ONGs</a>
           </div>
         </div>
 
@@ -32,7 +37,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h2>Perdeu seu bichinho?</h2>
             <p>Encontramos quase 400 bichinhos todos os anos</p>
-            <a href="#" class="main-btn">Ver perdidos</a>
+            <a href="{{route('site.galeria')}}" class="main-btn">Ver achados & perdidos</a>
           </div>
         </div>
 
@@ -41,7 +46,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h2>Quer trazer mais alegria pra sua vida?</h2>
             <p>Adote um de nossos bichinhos</p>
-            <a href="#" class="main-btn">Ver bichinhos</a>
+            <a href="{{route('site.galeria')}}" class="main-btn">Ver bichinhos</a>
           </div>
         </div>
 
@@ -85,11 +90,11 @@
       <div class="container">
         <div class="row slick_slide">
 
-            @foreach ($postsPerdido as $post)
+            @foreach ($postsAchado as $post)
             <div class="col-3">
                 <div class="team">
 
-                    <a href="{{route('site.galeria.perdido.post-individual', ['post' => $post])}}">
+                    <a href="{{route('site.galeria.achado.post-individual', ['post' => $post])}}">
                         <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}" class="img-fluid">
                     </a>
                     <h5>{{$post->name_Animal}}</h5>
@@ -120,11 +125,11 @@
       <div class="container">
         <div class="row slick_slide">
 
-            @foreach ($postsAchado as $post)
+            @foreach ($postsPerdido as $post)
             <div class="col-3">
                 <div class="team">
 
-                    <a href="{{route('site.galeria.achado.post-individual', ['post' => $post])}}">
+                    <a href="{{route('site.galeria.perdido.post-individual', ['post' => $post])}}">
                         <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}" class="img-fluid">
                     </a>
                     <h5>{{$post->name_Animal}}</h5>

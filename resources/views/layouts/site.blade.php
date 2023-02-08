@@ -86,7 +86,7 @@
 
                     <select  name="search" id="select-estadoong" aria-label="Procure uma ONG" class="form-control me-2" required>
                         <option value="" selected>Procure ONG's no seu Estado</option>
-                        <option value="Estado">Mostrar Todas</option>
+                        <option value="Todas">Mostrar Todas</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AP">Amapá</option>

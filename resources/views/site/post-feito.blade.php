@@ -6,7 +6,7 @@
   <form id="msform-post-certo">
     <fieldset class="sucesso" align-items: center>
 
-        <img src="imagens/catdog.png" alt="gato" id="imagem-catdog">
+        <img src="imagens/catdog.png" alt="gato" class="img-fluid img-post-certo" id="imagem-catdog">
         <br><br><br> <br>
         <h3 class="main-title-post-certo"> Postagem feita com sucesso!</h3>
         <br>

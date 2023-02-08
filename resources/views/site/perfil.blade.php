@@ -166,7 +166,7 @@
                         </div>
 
                         <!-- Email -->
-                        <div class="input-box">
+                        <div class="input-box-perfil">
                             <input id="emailuser" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{$user->email}}" required autocomplete="email" placeholder="E-mail">
 
                             @error('email')
@@ -178,7 +178,7 @@
 
 
                         <!-- Telefone -->
-                        <div class="input-box">
+                        <div class="input-box-perfil">
                             <input id="telefoneuser" type="tel" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ $user->phone }}" required autocomplete="phone" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" placeholder="Telefone: (XX)XXXXX-XXXX" >
 
                             @error('phone')
@@ -189,7 +189,7 @@
                         </div>
 
                         <!-- CEP -->
-                        <div class="input-box">
+                        <div class="input-box-perfil">
                             <input id="cepuser" type="text" class="form-control @error('cep') is-invalid @enderror" name="cep" value="{{ $user->cep }}" required autocomplete="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="Cep (Apenas Numeros)" >
 
                             @error('cep')
@@ -200,7 +200,7 @@
                         </div>
 
                         <!-- Rua -->
-                        <div class="input-box">
+                        <div class="input-box-perfil">
                             <input id="ruauser" type="text" class="form-control @error('rua') is-invalid @enderror" name="rua" value="{{ $enderecoUser->rua }}" required autocomplete="rua" placeholder="Nome da Rua" >
 
                             @error('rua')
@@ -211,7 +211,7 @@
                         </div>
 
                         <!-- Bairro -->
-                        <div class="input-box">
+                        <div class="input-box-perfil">
                             <input id="bairrouser" type="text" class="form-control @error('bairro') is-invalid @enderror" name="bairro" value="{{ $enderecoUser->bairro }}" required autocomplete="bairro" placeholder="Nome do Bairro" >
 
                             @error('bairro')
@@ -222,7 +222,7 @@
                         </div>
 
                         <!-- Cidade -->
-                        <div class="input-box">
+                        <div class="input-box-perfil">
                             <input id="cidadeuser" type="text" class="form-control @error('cidade') is-invalid @enderror" name="cidade" value="{{ $enderecoUser->cidade }}" required autocomplete="cidade" placeholder="Cidade" >
 
                             @error('cidade')
@@ -233,7 +233,7 @@
                         </div>
 
                         <!-- Complemento -->
-                        <div class="input-box">
+                        <div class="input-box-perfil">
                             <input id="complementouser" type="text" class="form-control @error('complemento') is-invalid @enderror" name="complemento" value="{{ $enderecoUser->complemento }}" required autocomplete="complemento" placeholder="Complemento" >
 
                             @error('complemento')
@@ -244,7 +244,7 @@
                         </div>
 
                         <!-- Numero da casa-->
-                        <div class="input-box">
+                        <div class="input-box-perfil">
                             <input id="numerouser" type="number" class="form-control @error('numero') is-invalid @enderror" name="numero" value="{{ $enderecoUser->numero }}" required autocomplete="numero" placeholder="Numero" >
 
                             @error('numero')
@@ -255,7 +255,7 @@
                         </div>
 
                         <!-- Senha -->
-                        <div class="input-box">
+                        <div class="input-box-perfil">
                             <input id="senhauser" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Digite sua senha">
 
                             @error('password')
@@ -266,7 +266,7 @@
                         </div>
 
                         <!-- Confirmar senha -->
-                        <div class="input-box">
+                        <div class="input-box-perfil">
                             <input id="confrimauser" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Digite sua senha novamente">
                         </div>
 
@@ -276,7 +276,7 @@
                     </div>
 
                     <!-- Botão de enviar dados -->
-                    <button class="submit action-button" target="_top">Salvar Dados</button>
+                    <button class="btn-salvar-dados" target="_top">Salvar Dados</button>
                     <br><br>
                 </fieldset>
                 </form>
@@ -299,63 +299,70 @@
 
         <script src="js/slick.min.js"></script>
         <script src="js/custom.js"></script>
-        
+
         <script src="js/cadastrong.js"></script>
 
-<!--Rodapé da pagina-->
-    <div>
-        <footer class="bg-light text-center text-white">
+        <!--Rodapé da pagina-->
+<div style="
+width: 100%;
+left: 50%;
+top: 107%;
+transform: translate(-50%, -50%);
+position: absolute;">
+    <footer class="bg-light text-center text-white">
 
-        <!-- Sites-->
-        <div class="text-center p-3" style="background-color: #7fab7cc4">
-            <section class="mb-4">
+    <!-- Sites-->
+    <div class="text-center p-3" style="background-color: #7fab7cc4">
+        <section class="mb-4">
 
-            <!-- Facebook -->
-            <a
-                class="btn btn-primary btn-floating m-1"
-                style="background-color: #3b5998;"
-                href="https://www.facebook.com/profile.php?id=100089471120038"
-                role="button"
+        <!-- Facebook -->
+        <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #3b5998;"
+            href="https://www.facebook.com/profile.php?id=100089471120038"
+            role="button"
+        >
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- Google -->
+        <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #dd4b39;"
+            href="#!"
+            role="button"
+        >
+            <i class="fab fa-google"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #ac2bac;"
+            href="https://www.instagram.com/socaes.gatos/"
+            role="button"
             >
-                <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
             </a>
 
-            <!-- Google -->
-            <a
-                class="btn btn-primary btn-floating m-1"
-                style="background-color: #dd4b39;"
-                href="#!"
-                role="button"
-            >
-                <i class="fab fa-google"></i>
-            </a>
+        <!-- Linkedin -->
+        <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #0082ca;"
+            href="#!"
+            role="button"
+        >
+            <i class="fab fa-linkedin-in"></i>
+        </a>
 
-            <!-- Instagram -->
-            <a
-                class="btn btn-primary btn-floating m-1"
-                style="background-color: #ac2bac;"
-                href="https://www.instagram.com/socaes.gatos/"
-                role="button"
-                >
-                <i class="fab fa-instagram"></i>
-                </a>
+        </section>
 
-            <!-- Linkedin -->
-            <a
-                class="btn btn-primary btn-floating m-1"
-                style="background-color: #0082ca;"
-                href="#!"
-                role="button"
-            >
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-
-            </section>
-
-            <!-- Copyright -->
-            © 2023 Copyright:
-            <a class="text-white" href="home.html">SOCÃES&GATOS</a>
-        </div>
-        </footer>
+        <!-- Copyright -->
+        © 2023 Copyright:
+        <a class="text-white" href="home.html">SOCÃES&GATOS</a>
     </div>
+    </footer>
+</div>
+
+
 </html>

@@ -19,7 +19,11 @@ class OngsController extends Controller
 
         $search = request('search');
 
+        if($search == ""){
 
+            $search = "Todas";
+
+        }
         if($search == "Todas"){
 
             return view('site.ongs', ['ongs'=>Ong::all()], ['endereco_ong'=>EnderecoOng::all()]);

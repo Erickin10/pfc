@@ -25,19 +25,15 @@
         <header>
         <!-- Barra de navegação -->
         <nav class="navbar fixed-top">
-
             <div class="container-fluid">
-
-            <a class="navbar-brand" href="{{route('site.home')}}">
-                <img src="{{asset('imagens/logzin.png')}}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                SOCÃES&GATOS
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="offcanvas offcanvas-end" tabhome="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
+                <a class="navbar-brand" href="{{route('site.home')}}">
+                    <img src="{{asset('imagens/logzin.png')}}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    SOCÃES&GATOS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabhome="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
 
                 <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasLightNavbarLabel">SOCÃES&GATOS </h5>
@@ -94,39 +90,56 @@
         </nav>
         </header>
 
-<div class="mostrarpostagem">
-    <img src="{{asset($post->img_Animal)}}" alt="Imagem mostrar"><br><br>
-      <p ><strong>Nome: </strong>{{$post->name_Animal}}<br>
-    <strong>Animal: </strong>{{$post->type_Animal}}<br>
-    <strong>Raça: </strong>{{$post->breed_Animal}}<br>
-    <strong>Cor: </strong>{{$post->color_Animal}}<br>
-    <strong>Idade: </strong>{{$post->age_Animal}}<br>
-    <strong>Genero: </strong>{{$post->gender_Animal}}<br>
-    <strong>Porte: </strong>{{$post->size_Animal}}<br>
-    <strong>Onde foi achado?: </strong>{{$post->local_Found_Animal}}<br>
-    <strong>Observaçoes: </strong>{{$post->post_Description}}<br><br>
-  </div>
+        <!-- ==============================================
+        Hero
+        =============================================== -->
+        <div class="conti">
+            <div class="conti-card">
+                <div class="verpost-header">
+                    <strong>{{$post->name_Animal}}</strong>
+                </div>
+                <img src="{{asset($post->img_Animal)}}" class="card-img-top" alt="Imagem de Capa">
+                <div class="cardverpost-body">
+                    <strong>Animal:</strong>{{$post->type_Animal}}<br>
+                    <strong>Raça:</strong>{{$post->breed_Animal}}<<br>
+                    <strong>Cor:</strong>{{$post->color_Animal}}<br>
+                    <strong>Idade:</strong>{{$post->age_Animal}}<br>
+                    <strong>Genero:</strong>{{$post->gender_Animal}}<br>
+                    <strong>Porte:</strong>{{$post->size_Animal}}<br>
+                    <strong>Onde foi achado?:</strong>{{$post->local_Found_Animal}}<br>
+                    <strong>Observaçoes:</strong>{{$post->post_Description}}<br><br>
+                </div>
+                <div class="verpost-footer">
+                    <a href="{{route('site.galeria')}}" class="verpost-btn btn">ok</a>
+                </div>
+            </div>
+        </div>
 
-</body>
-<!--Scripts-->
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-<!--Font Awesome-->
-<script src="https://kit.fontawesome.com/362d3e387c.js" crossorigin="anonymous"></script>
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/362d3e387c.js" crossorigin="anonymous"></script>
 
-<!--Progress Bar-->
-<script src="js/progessbar.min.js"></script>
+    <!--Progress Bar-->
+    <script src="js/progessbar.min.js"></script>
 
-<!--Parallax-->
-<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <!--Parallax-->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
-<script src="js/slick.min.js"></script>
-<script src="js/custom.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
 
 <!--Rodapé da pagina-->
-<div style="position: absolute; bottom: 0; width: 100%; height: 2.5rem;">
+<div style="
+width: 100%;
+left: 50%;
+top: 143%;
+transform: translate(-50%, -50%);
+position: absolute;">
     <footer class="bg-light text-center text-white">
 
     <!-- Sites-->

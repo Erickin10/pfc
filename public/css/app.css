@@ -122,7 +122,8 @@
     }
 
     /*Estiliza o formulario*/
-    .form-control-login {
+    .form-control-login{
+        text-align: center;
         background: transparent;
         height: 50px;
         color: white !important;
@@ -1375,6 +1376,60 @@
 
 
 /*Perfil*/
+
+.fieldset-perfilong{
+
+    box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
+    border-radius: 3%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding: 25px;
+}
+
+.perfilong{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    top: 52%;
+}
+
+.input-box-perfil input {
+    margin: 1rem 0;
+    padding: 0rem 4.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    margin-bottom: 2%;
+}
+
+.btn-salvar-dados{
+    width: auto;
+    font: inherit;
+    margin: 0;
+    color: #fff;
+    background: #7fab7c;
+    border: none;
+    padding: 9px;
+    border-radius: 10px;
+    border-bottom: 4px solid #7fab7c;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  }
+
+  .btn-salvar-dados:hover {
+    background: #628660;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+
+
     .form-control:focus {
         box-shadow: none;
         border-color: #BA68C8
@@ -1512,47 +1567,171 @@
         margin-bottom: 2%;
     }
 
-    /*Mostrara postagem*/
-    .mostrarpostagem{
-        width:30%;
+    /* ------------------------------- */
+    /* Post Individual
+    ---------------------------------- */
+    .author a{
+        font-family: 'Rokkitt', serif;
+        font-size: 16px;
+        color: #00C4CF;
+    }
+
+    .author p{
+        font-family: 'Rokkitt', serif;
+        font-size: 16px;
+        color: #8d8d8d;
+    }
+
+    .conti{
+        top: 70%;
+        width: 100%;
+        border-radius: 30%;
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-align: left;
-
-        box-shadow: 0 0 25px 5px rgb(0 0 0 / 40%);
-        border-radius: 25%;
-        height:  auto;
-        top: 50%;
     }
 
-    .mostrarpostagem img {
-        width: 75%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-        position: absolute;
-        border-radius: 20%;
-        top: 25%;
-    }
-
-    .mostrarpostagem p {
-        padding-top: 45%;
-        padding-bottom: 5%;
-        text-align: left;
-        left: 10%;
-        position: relative;
-    }
-
-    .btn-mostrar{
-        color: #FFF;
+    .verpost-header{
+        padding-top: 2%;
+        padding-bottom: 1%;
+        text-align: center;
         background-color: #7fab7c;
-        box-shadow: 0 0 25px 5px rgb(0 0 0 / 40%);
+        color: #FFF;
+        font-weight: 300;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
     }
 
-    .btn-mostrar:hover{
-        background-color: #628660;
+    .conti-card{
+        top: 50%;
+        width: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.4);
+        border-radius: 15px;
+    }
+
+    .cardverpost-body{
+        padding-top: 5%;
+        font-weight: inherit;
+        padding-left: 5%;
+        padding-bottom: 5%;
+    }
+
+    .verpost-footer{
+        position: relative;
+        left: 95%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .verpost-btn{
+        width: auto;
+        font: inherit;
+        margin: 0;
         color: #fff;
+        background: #7fab7c;
+        border: none;
+        padding: 7px;
+        border-radius: 6px;
+        border-bottom: 4px solid #7fab7c;
+        transition: all .2s ease;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+
+
+    }
+
+
+    
+
+
+    /* Redefinir Senha */
+    .form-cadredef {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 50px;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    /*Estilo do fieldset */
+    #msform-cadredef {
+        width: 600px ;
+        margin: 50px auto;
+        text-align-last: center;
+        position: relative;
+
+
+    }
+
+    #msform-cadredef fieldset {
+        background:white;
+        border: 0 none;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        top: -140px;
+        width: 80%;
+        margin: 0 10%;
+        position: relative;
+        padding: 1rem;
+        border-radius: 50px;
+
+    }
+
+    /*Inputs de texto e numero*/
+    #msform-cadredef input, #msform-cadredef textarea {
+        padding: 10px;
+        border: 1px solid #7fab7c;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: #2C3E50;
+        font-size: 13px;
+        border-radius: 50px;
+
+    }
+
+    /*Botäo*/
+    #msform-cadredef .action-button {
+        width: 100px;
+        background: #7fab7c;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 1px;
+        cursor: pointer;
+        padding: 10px;
+
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 10px;
+        font-weight: 500;
+        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
+        margin-bottom: 25px;
+        position: relative;
+
+    }
+
+    #msform-cadredef .action-button:hover, #msform-cadredef .action-button:focus {
+        box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+    }
+
+    #msform-cadredef h6{
+
+
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
 
 
@@ -1581,7 +1760,7 @@
 }
 
 section {
-    padding: 60px 0;
+    padding: 6px 0;
 }
 
 section .section-title {
