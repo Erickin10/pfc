@@ -126,60 +126,57 @@ background-size: cover;">
                         <!-- Bairro -->
                         <div class="input-box">
                             <input
-                                type="text"
-                                class="form-control shadow-none"
-                                id="bairrong"
-                                name="bairro"
-                                placeholder="Bairro"
-                                required>
+                            type="text"
+                            class="form-control shadow-none"
+                            id="bairrong"
+                            name="bairro"
+                            placeholder="Bairro"
+                            required>
                         </div>
 
                         <div class="input-box">
-
-                        <select  name="cidade" id="select-cidadeong" class="form-control shadow-none" required>
-                            <option value="Estado" selected>Estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito-Federal</option>
-                            <option value="ES">Espirito Santo</option>
-                            <option value="GO">Goiais</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grando do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                        </select>
-
+                            <select  name="estado" id="select-estadoong" class="form-control shadow-none" required>
+                                <option value="" selected>Estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito-Federal</option>
+                                <option value="ES">Espirito Santo</option>
+                                <option value="GO">Goiais</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grando do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
                         </div>
 
-                        <!-- Cidade
+                        <!-- Cidade -->
                         <div class="input-box">
                             <input
-                                type="text"
-                                class="form-control shadow-none"
-                                id="cidadong"
-                                name="cidade"
-                                placeholder="Cidade"
-                                required>
+                            type="text"
+                            class="form-control shadow-none"
+                            id="cidadong"
+                            name="cidade"
+                            placeholder="Cidade"
+                            required>
                         </div>
-                        -->
 
                         <!-- Complemento -->
                         <div class="input-box">
@@ -192,14 +189,14 @@ background-size: cover;">
 
                         <!-- Numero da casa-->
                         <div class="input-box">
-                            <div class="input-box">
-                                <input id="numeroong"
-                                type="number"
-                                name="numero"
-                                placeholder="Número"
-                                required>
-                            </div>
+                            <input id="numeroong"
+                            type="number"
+                            name="numero"
+                            placeholder="Número"
+                            required>
                         </div>
+
+                        <input type="hidden" name="aproved" value="false">
 
                     </div>
 

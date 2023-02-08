@@ -56,8 +56,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item" href="{{route('site.perfil')}}">Editar perfil</a></li>
-                          <li><a class="dropdown-item" href="{{route('site.perfil.meus-posts')}}">Editar posts</a></li>
+                          <li><a class="dropdown-item" href="{{route('site.perfil')}}">Meu Perfil</a></li>
+                          <li><a class="dropdown-item" href="{{route('site.perfil.meus-posts')}}">Meus posts</a></li>
                         </ul>
                     </li>
 
@@ -138,7 +138,6 @@
                 {{$enderecoUser = EnderecoUser::where([['id', 'like', $usuario]])->first();}}
                 {{$user = User::where([['id_Endereco', 'like', $enderecoUser->id]])->first();}}
 
-
                 @endphp
 
 
@@ -149,7 +148,7 @@
                 <!-- Fieldset em cima do formulario -->
                 <fieldset class="fieldset-perfilong">
 
-                    <h6 class="fs-title-cad">Editar perfil</h6>
+                    <h6 class="fs-title-cad">Meu Perfil</h6>
 
                     <!-- Inputs-->
                     <div class="input-group">

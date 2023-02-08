@@ -17,12 +17,13 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string('cep');
-            $table->string('rua');
-            $table->string('bairro');
+            $table->string('estado');
             $table->string('cidade');
+            $table->string('bairro');
+            $table->string('rua');
             $table->string('complemento');
             $table->integer('numero');
+            $table->string('cep');
         });
     }
 
