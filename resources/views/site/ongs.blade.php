@@ -24,11 +24,7 @@ use App\Models\User;
                                 {{$ong = Ong::where([['id_Endereco', 'like', $endereco->id]])->first();}}
                             @endphp
 
-                            @if ($ong == null)
-
-                                <p>Nao existem Ong's correspondentes a sua pesquisa</p>
-
-                            @elseif (Auth::user()->role == 'adm' && $ong->aproved == false)
+                            @if (Auth::user()->role == 'adm' && $ong->aproved == false)
 
                                 Ola Admin
 
@@ -52,40 +48,38 @@ use App\Models\User;
 
                                             <p class="card-text">
                                                 <strong>Estado: </strong>{{$endereco->estado}}
-                                                <strong>cidade: </strong>{{$ong->cidade}}
-                                                <strong>bairro: </strong>{{$endereco->bairro}}<br>
-                                                <strong>rua: </strong>{{$endereco->rua}}<br>
-                                                <strong>numero: </strong>{{$endereco->numero}}<br>
-                                                <strong>telefone: </strong>{{$ong->phone}}<br>
-                                                <strong>email: </strong>{{$ong->email}}<br>
+                                                <strong>Cidade: </strong>{{$endereco->cidade}}
+                                                <strong>Bairro: </strong>{{$endereco->bairro}}<br>
+                                                <strong>Rua: </strong>{{$endereco->rua}}<br>
+                                                <strong>Numero: </strong>{{$endereco->numero}}<br>
+                                                <strong>Telefone: </strong>{{$ong->phone}}<br>
+                                                <strong>Email: </strong>{{$ong->email}}<br>
                                                 <strong>Cnpj: </strong>{{$ong->cnpj}}<br>
                                             </p>
                                             <form action="{{route('site.ong.deletar', ['id'=> $ong->id])}}" method="POST">
-
                                                 @csrf
                                                 @method ('DELETE')
-
 
                                                 <button type="submit" class="btn btn-danger delete-btn">deletar</button>
                                             </form>
 
-                                            <form>
+                                            <form action="{{route('site.ong.aprovar', ['id'=> $ong->id])}}" method="POST">
+                                                @csrf
+                                                @method('PATCH')
+
                                                 <button >aprovar</button>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
 
-                            @endif
 
-                            @if(Auth::user()->role == 'cliente' && $ong->aproved == false)
 
-                            @endif
+                            @elseif(Auth::user()->role == 'cliente' && $ong->aproved == false)
 
-                            @if (Auth::user()->role == 'cliente' && $ong->aproved == true)
-                            @php
-                                {{$ong = Ong::where([['aproved', 'like', true]])->first();}}
-                            @endphp
+
+
+                            @elseif ($ong->aproved == true)
 
                             <div class="frontside">
                                 <div class="card">
@@ -107,12 +101,12 @@ use App\Models\User;
 
                                         <p class="card-text">
                                             <strong>Estado: </strong>{{$endereco->estado}}
-                                            <strong>cidade: </strong>{{$ong->cidade}}
-                                            <strong>bairro: </strong>{{$endereco->bairro}}<br>
-                                            <strong>rua: </strong>{{$endereco->rua}}<br>
-                                            <strong>numero: </strong>{{$endereco->numero}}<br>
-                                            <strong>telefone: </strong>{{$ong->phone}}<br>
-                                            <strong>email: </strong>{{$ong->email}}<br>
+                                            <strong>Cidade: </strong>{{$endereco->cidade}}
+                                            <strong>Bairro: </strong>{{$endereco->bairro}}<br>
+                                            <strong>Rua: </strong>{{$endereco->rua}}<br>
+                                            <strong>Numero: </strong>{{$endereco->numero}}<br>
+                                            <strong>Telefone: </strong>{{$ong->phone}}<br>
+                                            <strong>Email: </strong>{{$ong->email}}<br>
                                             <strong>Cnpj: </strong>{{$ong->cnpj}}<br>
                                         </p>
 

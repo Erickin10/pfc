@@ -35,6 +35,7 @@ Route::middleware('auth')->namespace('Site')->group(function (){
     // Rotas das Ongs
     Route::get('ongs', [OngsController::class, 'index']) -> name('site.ong');
     Route::delete('ongs/{id}', [OngsController::class,'destroy']) -> name('site.ong.deletar');
+    Route::patch('ongs/{id}', [OngsController::class,'approve']) -> name('site.ong.aprovar');
 
     // Routas de 'concluidos'
     Route::view('post-feito', 'site.post-feito') -> name('site.post-feito');

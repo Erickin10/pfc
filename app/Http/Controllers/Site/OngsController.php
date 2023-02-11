@@ -115,16 +115,34 @@ class OngsController extends Controller
         //
     }
 
+    public function approve($id){
+
+    $ong = Ong::find($id);
+    $ong->aproved = true;
+    $ong->save();
+
+    return redirect()->back()->with('success', 'Ong aprovada com sucesso.');
+}
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id){
+
+
+
         $ong = Ong::find($id);
+
+        $endereco_ong = $ong->id_Endereco;
+
+        $endereco = EnderecoOng::where('id', $endereco_ong)->first();
+
+
         $ong->delete();
+        $endereco->delete();
 
     return redirect()->route('site.ong')->with('success', 'Ong excluída com sucesso.');
     }
