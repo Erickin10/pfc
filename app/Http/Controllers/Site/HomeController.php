@@ -5,10 +5,6 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use App\Models\FoundAnimal;
 use App\Models\LostAnimal;
-use App\Models\Ong;
-use App\Models\EnderecoOng;
-use App\Models\User;
-use App\Models\EnderecoUser;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

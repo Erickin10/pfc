@@ -14,6 +14,7 @@ class EnderecoUser extends Model {
         'rua',
         'bairro',
         'cidade',
+        'estado',
         'complemento',
         'numero',
     ];

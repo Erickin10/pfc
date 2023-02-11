@@ -3,6 +3,7 @@
 use App\Http\Controllers\RegisterOngController;
 use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Site\HomeController;
 use App\Http\Controllers\Site\GaleriaController;
 use App\Http\Controllers\Site\PostarPerdidoController;
@@ -33,6 +34,7 @@ Route::middleware('auth')->namespace('Site')->group(function (){
 
     // Rotas das Ongs
     Route::get('ongs', [OngsController::class, 'index']) -> name('site.ong');
+    Route::delete('ongs/{id}', [OngsController::class,'destroy']) -> name('site.ong.deletar');
 
     // Routas de 'concluidos'
     Route::view('post-feito', 'site.post-feito') -> name('site.post-feito');

@@ -20,7 +20,8 @@ class Ong extends Model
         'email',
         'description',
         'phone',
-        'cnpj'
+        'cnpj',
+        'aproved'
     ];
 
     /*public function endereco(){

@@ -41,7 +41,8 @@ class RegisterOngController extends Controller
             'description' => $request['description'],
             'phone' => $request['phone'],
             'cnpj' => $request['cnpj'],
-            'id_Endereco' => $id_Endereco
+            'id_Endereco' => $id_Endereco,
+            'aproved' => false
         ];
 
         Ong::create($data2);;

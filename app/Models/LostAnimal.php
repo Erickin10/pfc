@@ -24,7 +24,8 @@ class LostAnimal extends Model
         'color_Animal',
         //'local_Animal',
         //'local_Found_Animal',
-        'local_Lost_Animal'
+        'local_Lost_Animal',
+        'aproved'
 
     ];
 }

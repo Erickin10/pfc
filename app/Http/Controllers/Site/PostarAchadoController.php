@@ -47,6 +47,8 @@ class PostarAchadoController extends Controller{
 
         }
 
+        $data['aproved'] = false;
+
         FoundAnimal::create($data);
         return redirect()->route('site.post-feito');
 

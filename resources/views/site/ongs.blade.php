@@ -16,13 +16,75 @@ use App\Models\User;
                 <!-- Team member -->
                 @foreach ($endereco_ong as $endereco)
 
-
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="image-flip" >
                         <div class="mainflip flip-0">
 
                             @php
-                            {{$ong = Ong::where([['id_Endereco', 'like', $endereco->id]])->first();}}
+                                {{$ong = Ong::where([['id_Endereco', 'like', $endereco->id]])->first();}}
+                            @endphp
+
+                            @if ($ong == null)
+
+                                <p>Nao existem Ong's correspondentes a sua pesquisa</p>
+
+                            @elseif (Auth::user()->role == 'adm' && $ong->aproved == false)
+
+                                Ola Admin
+
+                                <div class="frontside">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h4 class="card-title">{{$ong->name}}</h4>
+                                            <p class="card-text">
+                                                {{$ong->description}}
+                                            </p>
+                                            <a href="#" class="btn btn-primary btn-sm">
+                                                <i class="fa fa-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backside">
+                                    <div class="card">
+                                        <div class="card-body text-justify mt-4">
+                                            <h4 class="card-title">{{$ong->name}}</h4>
+
+                                            <p class="card-text">
+                                                <strong>Estado: </strong>{{$endereco->estado}}
+                                                <strong>cidade: </strong>{{$ong->cidade}}
+                                                <strong>bairro: </strong>{{$endereco->bairro}}<br>
+                                                <strong>rua: </strong>{{$endereco->rua}}<br>
+                                                <strong>numero: </strong>{{$endereco->numero}}<br>
+                                                <strong>telefone: </strong>{{$ong->phone}}<br>
+                                                <strong>email: </strong>{{$ong->email}}<br>
+                                                <strong>Cnpj: </strong>{{$ong->cnpj}}<br>
+                                            </p>
+                                            <form action="{{route('site.ong.deletar', ['id'=> $ong->id])}}" method="POST">
+
+                                                @csrf
+                                                @method ('DELETE')
+
+
+                                                <button type="submit" class="btn btn-danger delete-btn">deletar</button>
+                                            </form>
+
+                                            <form>
+                                                <button >aprovar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            @endif
+
+                            @if(Auth::user()->role == 'cliente' && $ong->aproved == false)
+
+                            @endif
+
+                            @if (Auth::user()->role == 'cliente' && $ong->aproved == true)
+                            @php
+                                {{$ong = Ong::where([['aproved', 'like', true]])->first();}}
                             @endphp
 
                             <div class="frontside">
@@ -44,8 +106,8 @@ use App\Models\User;
                                         <h4 class="card-title">{{$ong->name}}</h4>
 
                                         <p class="card-text">
-                                            <strong>Estado: </strong>{{$endereco->cidade}}
-                                            <strong>cidade: </strong>{{$ong->name}}
+                                            <strong>Estado: </strong>{{$endereco->estado}}
+                                            <strong>cidade: </strong>{{$ong->cidade}}
                                             <strong>bairro: </strong>{{$endereco->bairro}}<br>
                                             <strong>rua: </strong>{{$endereco->rua}}<br>
                                             <strong>numero: </strong>{{$endereco->numero}}<br>
@@ -58,14 +120,11 @@ use App\Models\User;
                                     </div>
                                 </div>
                             </div>
-                            @if(Auth::user()->role == "adm" && $ong->aproved == false)
-
-                            <div style="align-items: center">
-                                <button >deletar</button>
-                                <button>aprovar</button>
-                            </div>
 
                             @endif
+
+
+
                         </div>
                     </div>
                 </div>

@@ -19,6 +19,8 @@ class OngsController extends Controller
 
         $search = request('search');
 
+
+
         if($search == ""){
 
             $search = "Todas";
@@ -51,7 +53,7 @@ class OngsController extends Controller
                 return view('site.ongs', ['ongs' => $ong], ['endereco_ong' => $endereco_ong]);
             }*/
 
-            return view('site.ongs', ['endereco_ong' => EnderecoOng::where([['cidade', 'like', $search]])->get()],
+            return view('site.ongs', ['endereco_ong' => EnderecoOng::where([['estado', 'like', $search]])->get()],
             ['ongs'=>Ong::all()]);
 
         }
@@ -121,6 +123,9 @@ class OngsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ong = Ong::find($id);
+        $ong->delete();
+
+    return redirect()->route('site.ong')->with('success', 'Ong excluída com sucesso.');
     }
 }

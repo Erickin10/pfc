@@ -37,6 +37,8 @@ class PostarPerdidoController extends Controller{
 
         }
 
+        $data['aproved'] = false;
+
         LostAnimal::create($data);
         return redirect()->route('site.post-feito');
 

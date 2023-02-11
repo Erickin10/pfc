@@ -73,6 +73,18 @@
                     <a class="nav-link" href="{{route('site.galeria')}}">Achados e perdidos</a>
                     </li>
 
+                    @if (Auth::user()->role == 'adm')
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('site.galeria')}}">Aprovar Posts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('site.ong')}}">Aprovar Ongs</a>
+                    </li>
+
+                    @endif
+
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}">
                             Logout

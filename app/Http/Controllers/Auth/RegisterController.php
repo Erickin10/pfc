@@ -70,6 +70,7 @@ class RegisterController extends Controller
             'rua' => $request['rua'],
             'bairro' => $request['bairro'],
             'cidade' => $request['cidade'],
+            'estado' => $request['estado'],
             'complemento' => $request['complemento'],
             'numero' => $request['numero']
         ];
@@ -83,7 +84,8 @@ class RegisterController extends Controller
             'phone' => $request['phone'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
-            'id_Endereco' => $id_Endereco
+            'id_Endereco' => $id_Endereco,
+            'role' => 'cliente'
         ];
 
         return User::create($data2);;

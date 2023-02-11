@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('local_Found_Animal')->nullable();
             $table->string('img_Animal')->nullable();
             $table->text('post_Description')->nullable();
+            $table->boolean('aproved');
         });
     }
 

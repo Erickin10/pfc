@@ -100,14 +100,14 @@
                 </div>
                 <img src="{{asset($post->img_Animal)}}" class="card-img-top" alt="Imagem de Capa">
                 <div class="cardverpost-body">
-                    <strong>Animal:</strong>{{$post->type_Animal}}<br>
-                    <strong>Raça:</strong>{{$post->breed_Animal}}<<br>
-                    <strong>Cor:</strong>{{$post->color_Animal}}<br>
-                    <strong>Idade:</strong>{{$post->age_Animal}}<br>
-                    <strong>Genero:</strong>{{$post->gender_Animal}}<br>
-                    <strong>Porte:</strong>{{$post->size_Animal}}<br>
-                    <strong>Onde foi achado?:</strong>{{$post->local_Found_Animal}}<br>
-                    <strong>Observaçoes:</strong>{{$post->post_Description}}<br><br>
+                    <strong>Animal: </strong>{{$post->type_Animal}}<br>
+                    <strong>Raça: </strong>{{$post->breed_Animal}}<<br>
+                    <strong>Cor: </strong>{{$post->color_Animal}}<br>
+                    <strong>Idade: </strong>{{$post->age_Animal}}<br>
+                    <strong>Genero: </strong>{{$post->gender_Animal}}<br>
+                    <strong>Porte: </strong>{{$post->size_Animal}}<br>
+                    <strong>Onde foi achado? </strong>{{$post->local_Found_Animal}}<br>
+                    <strong>Observaçoes: </strong>{{$post->post_Description}}<br><br>
                 </div>
                 <div class="verpost-footer">
                     <a href="{{route('site.galeria')}}" class="verpost-btn btn">ok</a>

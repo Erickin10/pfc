@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class FoundAnimal extends Model {
-    
+
     use HasFactory;
 
     protected $fillable = [
@@ -25,5 +25,6 @@ class FoundAnimal extends Model {
         'local_Animal',
         'local_Found_Animal',
         //'local_Lost_Animal'
+        'aproved'
     ];
 }

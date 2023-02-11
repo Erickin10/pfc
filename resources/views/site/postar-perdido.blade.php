@@ -93,7 +93,7 @@
         <h2 class="fs-title-post">Passo 3</h2>
         <h3 class="fs-subtitle-post">Nos conte outros detalhes</h3>
         <img src="imagens/dogcatsob.png" alt="cachorro" id="imagem-dogcatsob3">
-        <input type="text" name="lost_Animal" placeholder="Onde ele foi perdido?" />
+        <input type="text" name="local_Lost_Animal" placeholder="Onde ele foi perdido?" />
         <input type="text" name="post_Description" placeholder="Observações" />
         <input type="number" name="bounty_Animal" step="1" min="0" max="99999.99" id="recompensa" placeholder="Recompensa(opcional)"/>
         <input type="hidden" name="id_Usuario" value="{{Auth::user()->id}}"/>
