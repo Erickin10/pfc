@@ -10,6 +10,7 @@ use App\Http\Controllers\Site\PostarPerdidoController;
 use App\Http\Controllers\Site\PostarAchadoController;
 use App\Http\Controllers\Site\PerfilController;
 use App\Http\Controllers\Site\OngsController;
+use App\Http\Controllers\Site\PostController;
 
 
 /*
@@ -36,6 +37,15 @@ Route::middleware('auth')->namespace('Site')->group(function (){
     Route::get('ongs', [OngsController::class, 'index']) -> name('site.ong');
     Route::delete('ongs/{id}', [OngsController::class,'destroy']) -> name('site.ong.deletar');
     Route::patch('ongs/{id}', [OngsController::class,'approve']) -> name('site.ong.aprovar');
+
+    // Rotas de gerenciamento de Posts
+    Route::get('posts-confirmacao', [PostController::class, 'index']) -> name('site.confirmacao');
+
+    Route::delete('post-achado/{id}', [PostController::class,'destroyAchado']) -> name('site.post-achado.deletar');
+    Route::patch('post-achado/{id}', [PostController::class,'approveAchado']) -> name('site.post-achado.aprovar');
+
+    Route::delete('post-perdido/{id}', [PostController::class,'destroyPerdido']) -> name('site.post-perdido.deletar');
+    Route::patch('post-perdido/{id}', [PostController::class,'approvePerdido']) -> name('site.post-perdido.aprovar');
 
     // Routas de 'concluidos'
     Route::view('post-feito', 'site.post-feito') -> name('site.post-feito');

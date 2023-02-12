@@ -76,7 +76,7 @@
                     @if (Auth::user()->role == 'adm')
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('site.galeria')}}">Aprovar Posts</a>
+                        <a class="nav-link" href="{{route('site.confirmacao')}}">Aprovar Posts</a>
                     </li>
 
                     <li class="nav-item">

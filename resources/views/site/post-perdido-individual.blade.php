@@ -116,6 +116,35 @@
                 </div>
                 <div class="verpost-footer">
                     <a href="{{route('site.galeria')}}" class="verpost-btn btn">ok</a>
+
+
+                    @if (Auth::user()->role == 'adm' && $post->aproved == false)
+
+                        <form action="{{route('site.post-perdido.deletar', ['id'=> $post->id])}}" method="POST">
+                            @csrf
+                            @method ('DELETE')
+
+                            <button type="submit" class="btn btn-danger delete-btn">deletar</button>
+                        </form>
+
+                        <form action="{{route('site.post-perdido.aprovar', ['id'=> $post->id])}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+
+                            <button type="submit">aprovar</button>
+                        </form>
+
+                    @elseif (Auth::user()->role == 'adm' && $post->aproved == true)
+
+                        <form action="{{route('site.post-perdido.deletar', ['id'=> $post->id])}}" method="POST">
+                            @csrf
+                            @method ('DELETE')
+
+                            <button type="submit" class="btn btn-danger delete-btn">deletar</button>
+                        </form>
+
+                    @endif
+
                 </div>
             </div>
         </div>

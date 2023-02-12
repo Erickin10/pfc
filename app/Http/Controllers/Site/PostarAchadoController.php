@@ -53,4 +53,6 @@ class PostarAchadoController extends Controller{
         return redirect()->route('site.post-feito');
 
     }
+
+    
 }

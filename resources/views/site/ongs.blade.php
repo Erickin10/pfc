@@ -67,7 +67,7 @@ use App\Models\User;
                                                 @csrf
                                                 @method('PATCH')
 
-                                                <button >aprovar</button>
+                                                <button type="submit">aprovar</button>
                                             </form>
                                         </div>
                                     </div>

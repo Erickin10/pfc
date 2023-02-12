@@ -123,7 +123,7 @@
     <h3 class="achados-main-title"
     style="line-height: 1.5;
     font-weight: 400;
-    font-family: Lato, Arial, sans-serif;">Achados</h3>
+    font-family: Lato, Arial, sans-serif;">Aprovar Achados</h3>
 
     <br><br><br>
 
@@ -131,13 +131,13 @@
 
         @foreach ($postsAchado as $post)
 
-        @if ($post->aproved == true)
+            @if (Auth::user()->role == 'adm' && $post->aproved == false)
 
-            <a href="{{route('site.galeria.achado.post-individual', ['post' => $post])}}">
-                <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}">
-            </a>
+                <a href="{{route('site.galeria.achado.post-individual', ['post' => $post])}}">
+                    <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}">
+                </a>
 
-        @endif
+            @endif
 
         @endforeach
 
@@ -145,7 +145,10 @@
 
     <br><br><br>  <br><br>   <br><br> <br> <br><br><br><br>  <br>
 
-    <h3 class="perdidos-main-title" style="line-height: 1.5; font-weight: 400;	font-family: Lato, Arial, sans-serif;">Perdidos</h3>
+    <h3 class="perdidos-main-title"
+    style="line-height: 1.5;
+    font-weight: 400;
+    font-family: Lato, Arial, sans-serif;">Aprovar Perdidos</h3>
 
     <br><br><br>
 
@@ -153,19 +156,17 @@
 
         @foreach ($postsPerdido as $post)
 
-        @if ($post->aproved == true)
+            @if (Auth::user()->role == 'adm' && $post->aproved == false)
 
-        <a href="{{route('site.galeria.perdido.post-individual', ['post' => $post])}}">
-            <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}">
-        </a>
+                <a href="{{route('site.galeria.perdido.post-individual', ['post' => $post])}}">
+                    <img src="{{asset($post->img_Animal)}}" alt="{{asset($post->img_Animal)}}">
+                </a>
 
-        @endif
+            @endif
 
         @endforeach
 
     </div>
-
-
 
   </body>
 
@@ -179,9 +180,9 @@
   <script src="https://kit.fontawesome.com/362d3e387c.js" crossorigin="anonymous"></script>
 
   <!--Progress Bar-->
-  <script src="{{asset('js/progessbar.min.js')}}"></script>
+  <script src="js/progessbar.min.js"></script>
 
-  <script src="{{asset('js/postar.js')}}"></script>
+  <script src="js/postar.js"></script>
 
   <!--Rodapé da pagina-->
   <div style="position: absolute; bottom: -110%; width: 100%; height: 2.5rem;">

@@ -28,7 +28,7 @@ class GaleriaController extends Controller
 
     public function perdido (LostAnimal $post)
     {
-        
+
         return view('site.post-perdido-individual',['post' => $post]);
     }
 
@@ -75,17 +75,6 @@ class GaleriaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
     {
         //
     }
